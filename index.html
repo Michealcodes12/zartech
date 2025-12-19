@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zar Tech | Official Online Store</title>
+    <!-- Using Google Fonts for a modern tech look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Using FontAwesome for Icons (loaded via CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+
+
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        FREE SHIPPING ON ORDERS OVER ₦25,000 | 1 YEAR WARRANTY
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="nav-container">
+            <div class="logo_img">
+                <a href="#" class="logo">
+                    <img src="./assest/ZAR_20251217_124657_0000.png" alt="">
+                </a>
+            </div>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#">Home</a>
+                <a href="#products">Product</a>
+
+                <a href="https://wa.me/2348000000000" target="_blank" class="btn-contactus"
+                    style="width: 50%; border-radius: 5px; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 1px;">
+                    <p>Message Us</p>
+                    <i class="fa-brands fa-whatsapp" style="font-size: 2rem;"></i>
+                </a>
+            </nav>
+
+            <div class="nav-icons">
+                <div class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SLIDESHOW HERO -->
+    <section class="hero-slider" id="heroSlider">
+
+        <!-- Slide 1 -->
+        <div class="slide active"
+            style="background-image: url('./assest/baner1.jpeg'); background-size: cover; background-repeat: no-repeat;">
+            <div class="slide-content">
+                <!-- <h2>Sound That<br>Moves You</h2>
+                <p>Experience the new ZarBuds Pro with active noise cancellation and 40-hour battery life.</p>
+                <button class="btn-primary">Shop Audio</button> -->
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide" style="background-image: url('./assest/banner2.jpeg');">
+            <div class="slide-content">
+                <!-- <h2>Smart Meets<br>Style</h2>
+                <p>The new ZarWatch Ultra monitors your health, tracks your fitness, and looks good doing it.</p>
+                <button class="btn-primary">Discover More</button> -->
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <!-- <div class="slide"
+            style="background-image: url('https://placehold.co/1920x800/000000/2ce641?text=Power+Bank+Beasts');">
+            <div class="slide-content">
+                <h2>Never Run<br>Out of Power</h2>
+                <p>27,000mAh massive capacity. Fast charging for laptops and phones on the go.</p>
+                <button class="btn-primary">Shop Power</button>
+            </div>
+        </div> -->
+
+        <!-- Arrows -->
+        <div class="slider-arrow arrow-left" id="prevSlide"><i class="fa-solid fa-chevron-left"></i></div>
+        <div class="slider-arrow arrow-right" id="nextSlide"><i class="fa-solid fa-chevron-right"></i></div>
+
+        <!-- Dots -->
+        <div class="slider-dots" id="sliderDots">
+            <div class="dot active" data-slide="0"></div>
+            <div class="dot" data-slide="1"></div>
+            <div class="dot" data-slide="2"></div>
+        </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <!-- DETAILED FEATURES SECTION (NOW A SLIDER) -->
+    <section class="detailed-features">
+        <div class="features-slider-container">
+
+
+            <!-- Feature 3: Power banks -->
+            <div class="feature-row">
+                <div class="feature-img-container">
+                    <img src="./assest/product_1-removebg-preview.png" alt="Power Bank Detail" class="feature-img">
+                </div>
+                <div class="feature-content">
+                    <span class="feature-label">AniFast™ Charging</span>
+                    <h2 class="feature-title">Power That Lasts All Week</h2>
+                    <p class="feature-desc">
+                        Never suffer from low battery anxiety again. Our 27,000mAh Traveler Power Bank charges an iPhone
+                        14 up to 5 times. Equipped with 22.5W fast charging and dual USB-C ports, it's the ultimate
+                        travel companion for digital nomads.
+                    </p>
+                    <a href="#products" class="feature-link">Shop Power Banks <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Feature 4: teasers -->
+            <div class="feature-row active">
+                <div class="feature-img-container">
+                    <img src="./assest/product4-removebg-preview.png" alt="Grooming Detail" class="feature-img">
+                </div>
+                <div class="feature-content">
+                    <span class="feature-label">Pocket Teasers</span>
+                    <h2 class="feature-title">Walk with Confidence</h2>
+                    <p class="feature-desc">
+                        The Teasers combines high-performance power with a sleek, pocket-friendly design. The body is
+                        sculpted for intuitive
+                        handling, housing a powerful internal battery chargeable via standard Micro-USB. Whether you are
+                        navigating the night or
+                        keeping it in your glovebox, the VoltGuard is the silent partner that’s always ready.
+                    </p>
+                    <a href="#products" class="feature-link">shop Kits <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Controls -->
+        <div class="feature-controls">
+            <button class="feature-btn" id="featPrev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="feature-btn" id="featNext"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+    </section>
+
+    <!-- NEW ARRIVALS -->
+    <section id="products" class="products-container">
+        <div class="section-header">
+            <h2 class="section-title">New Arrivals</h2>
+            <!-- <a href="#" style="color: var(--brand-green); font-weight: 600;">View All <i
+                    class="fa-solid fa-arrow-right"></i></a> -->
+        </div>
+
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <span class="badge">NEW</span>
+                <img src="./assest/product_1-removebg-preview.png" alt="Product" class="product-img">
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    (120)
+                </div>
+                <h3 class="product-title">ZarBuds X True Wireless Bass Earbuds</h3>
+                <div class="price-box">
+                    <span class="price">₦18,500</span>
+                    <span class="old-price">₦22,000</span>
+                </div>
+                <button class="add-btn" onclick="buyNow('ZarBuds X True Wireless Bass Earbuds', '₦18,500')">
+                    <i class="fa-brands fa-whatsapp"></i> Buy Now
+                </button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <span class="badge">HOT</span>
+                <img src="./assest/product2-removebg-preview.png" alt="Product" class="product-img">
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    (85)
+                </div>
+                <h3 class="product-title">ZarWatch Pro 2.0 - AMOLED Screen</h3>
+                <div class="price-box">
+                    <span class="price">₦45,000</span>
+                    <span class="old-price">₦55,000</span>
+                </div>
+                <button class="add-btn" onclick="buyNow('ZarWatch Pro 2.0 - AMOLED Screen', '₦45,000')">
+                    <i class="fa-brands fa-whatsapp"></i> Buy Now
+                </button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="./assest/product3-removebg-preview.png" alt="Product" class="product-img">
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    (340)
+                </div>
+                <h3 class="product-title">ZarPower 20000mAh Fast Charging Bank</h3>
+                <div class="price-box">
+                    <span class="price">₦12,000</span>
+                    <span class="old-price">₦15,000</span>
+                </div>
+                <button class="add-btn" onclick="buyNow('ZarPower 20000mAh Fast Charging Bank', '₦12,000')">
+                    <i class="fa-brands fa-whatsapp"></i> Buy Now
+                </button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <span class="badge">-20%</span>
+                <img src="./assest/product4-removebg-preview.png" alt="Product" class="product-img">
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    (42)
+                </div>
+                <h3 class="product-title">ZarSound Portable Bluetooth Speaker</h3>
+                <div class="price-box">
+                    <span class="price">₦25,000</span>
+                    <span class="old-price">₦31,250</span>
+                </div>
+                <button class="add-btn" onclick="buyNow('ZarSound Portable Bluetooth Speaker', '₦25,000')">
+                    <i class="fa-brands fa-whatsapp"></i> Buy Now
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="#" class="logo" style="color: #fff; margin-bottom: 1rem; display:inline-block;">
+                    <i class="fa-solid fa-bolt" style="color: var(--brand-green);"></i>
+                    ZAR<span>TECH</span>
+                </a>
+                <p style="color: #aaa; line-height: 1.6;">
+                    Providing the best digital gadgets to power your lifestyle. Quality, durability, and style in every
+                    device.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Support</a></li>
+                    <li><a href="#">Warranty Policy</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="#">Audio</a></li>
+                    <li><a href="#">Power</a></li>
+                    <li><a href="#">Smart Wearables</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col newsletter">
+                <h3>Stay Updated</h3>
+                <p style="color: #aaa; margin-bottom: 10px;">Chat with us for exclusive offers and support.</p>
+                <a href="https://wa.me/2348000000000" target="_blank" class="btn-primary"
+                    style="width: 100%; border-radius: 5px; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i>
+                    Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Zar Tech. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // --- WHATSAPP PURCHASE FUNCTION ---
+        function buyNow(productName, price) {
+            // Replace with your actual WhatsApp business number (international format without +)
+            const phoneNumber = "2348000000000";
+
+            // Create the message
+            const message = `Hello Zar Tech, I am interested in buying the ${productName} for ${price}. Is it still available?`;
+
+            // Encode the message for URL
+            const encodedMessage = encodeURIComponent(message);
+
+            // Create the URL
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+            // Open in new tab
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // --- MOBILE MENU TOGGLE ---
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            // Change icon based on state
+            const icon = hamburger.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // --- SLIDESHOW LOGIC ---
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const prevBtn = document.getElementById('prevSlide');
+        const nextBtn = document.getElementById('nextSlide');
+
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+        const slideInterval = 5000; // 5 seconds
+        let autoSlide;
+
+        function showSlide(index) {
+            // Loop functionality
+            if (index >= totalSlides) currentSlide = 0;
+            else if (index < 0) currentSlide = totalSlides - 1;
+            else currentSlide = index;
+
+            // Update Classes
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        function startAutoSlide() {
+            autoSlide = setInterval(nextSlide, slideInterval);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlide);
+            startAutoSlide();
+        }
+
+        // Event Listeners for Slider
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetAutoSlide();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetAutoSlide();
+        });
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', (e) => {
+                const index = parseInt(e.target.dataset.slide);
+                showSlide(index);
+                resetAutoSlide();
+            });
+        });
+
+        // Initialize
+        startAutoSlide();
+
+        // --- FEATURE SLIDER LOGIC ---
+        const featureRows = document.querySelectorAll('.feature-row');
+        const featPrev = document.getElementById('featPrev');
+        const featNext = document.getElementById('featNext');
+        let currentFeat = 0;
+
+        function showFeature(index) {
+            // Hide all
+            featureRows.forEach(row => row.classList.remove('active'));
+
+            // Loop logic
+            if (index >= featureRows.length) currentFeat = 0;
+            else if (index < 0) currentFeat = featureRows.length - 1;
+            else currentFeat = index;
+
+            // Show active
+            featureRows[currentFeat].classList.add('active');
+        }
+
+        featNext.addEventListener('click', () => {
+            showFeature(currentFeat + 1);
+        });
+
+        featPrev.addEventListener('click', () => {
+            showFeature(currentFeat - 1);
+        });
+
+    </script>
+</body>
+
+</html>
