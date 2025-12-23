@@ -53,65 +53,28 @@ header {
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0.2rem 1rem;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .logo {
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: var(--brand-dark);
+  /* Removed font styles, focused on container alignment */
   display: flex;
   align-items: center;
-  gap: 5px;
+  height: 60px;
+  /* Fixed height for header consistency */
 }
+
 .logo img {
-  width: 100%;
-  max-width: 80px;
-  object-fit: cover;
-}
-.logo span {
-  color: var(--brand-green);
-}
-.btn-primary {
-  padding: 15px 10px;
-}
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.nav-links .btn-contactus {
-  display: flex;
-  align-items: center;
-  background: #2ce641;
-  color: white;
-  padding: 0.2rem 0.9rem;
-  border-radius: 5px;
-  gap: 0.5rem !important;
-}
-
-.nav-links .btn-contactus:hover {
-  background-color: white;
-}
-.nav-links a {
-  font-weight: 600;
-  font-size: 0.85rem;
-  transition: var(--transition);
-  flex: 1;
-  max-width: fit-content;
-}
-
-.nav-links a:hover {
-  color: var(--brand-green);
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-icons {
-  display: none;
+  display: flex;
   gap: 1.5rem;
   align-items: center;
 }
@@ -126,10 +89,54 @@ header {
   color: var(--brand-green);
 }
 
-.hamburger {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
+/* --- NEW WHATSAPP CONTACT BUTTON --- */
+.nav-contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #25d366;
+  /* WhatsApp Green */
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  border: 2px solid #25d366;
+  text-decoration: none;
+  /* Ensure no underline */
+  white-space: nowrap;
+  /* Prevent text wrapping */
+}
+
+.nav-contact-btn:hover {
+  background-color: transparent;
+  color: #25d366;
+}
+
+/* Mobile adjustment for Contact Button */
+@media (max-width: 480px) {
+  .contact-text {
+    display: none;
+  }
+
+  .nav-contact-btn {
+    padding: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+  }
+
+  .nav-contact-btn i {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  /* Adjust logo size on very small screens */
+  .logo {
+    height: 40px;
+  }
 }
 
 /* --- HERO SLIDESHOW SECTION --- */
@@ -155,6 +162,8 @@ header {
   justify-content: center;
   background-size: cover;
   background-position: center;
+  background-image: var(--bg-desktop);
+  /* Default to desktop */
 }
 
 .slide.active {
@@ -201,115 +210,195 @@ header {
   color: #ddd;
 }
 
-.btn-primary {
-  display: inline-block;
-  background-color: var(--brand-green);
-  color: #000;
-  padding: 12px 35px;
-  font-weight: 700;
-  border-radius: 50px;
-  text-transform: uppercase;
-  transition: var(--transition);
-  border: none;
-  cursor: pointer;
-}
+/* ... existing btn-primary styles ... */
 
-.btn-primary:hover {
-  background-color: #fff;
-  transform: translateY(-2px);
-}
-
-/* Slider Controls */
-.slider-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 10;
-  transition: var(--transition);
-}
-
-.slider-arrow:hover {
-  background: var(--brand-green);
-  color: #000;
-}
-
-.arrow-left {
-  left: 20px;
-}
-
-.arrow-right {
-  right: 20px;
-}
-
-.slider-dots {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  z-index: 10;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.dot.active {
-  background: var(--brand-green);
-  transform: scale(1.2);
-}
+/* ... existing slider controls ... */
 
 /* --- CATEGORY CIRCLES --- */
-.categories-section {
+/* ... existing category styles ... */
+
+/* --- FLASH SALE SECTION (NEW) --- */
+.flash-sale {
+  background: var(--brand-dark);
+  color: #fff;
   padding: 3rem 1rem;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  /* Prevent spillover */
+}
+
+.flash-container {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 2rem;
-  text-align: center;
+  flex-wrap: wrap;
 }
 
-.cat-item img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: #e0e0e0;
-  padding: 15px;
-  margin-bottom: 10px;
-  transition: var(--transition);
-  object-fit: contain;
+.flash-content {
+  flex: 1;
+  min-width: 300px;
+  /* Desktop default */
 }
 
-.cat-item:hover img {
-  background: var(--brand-green);
-  transform: translateY(-5px);
-}
-
-.cat-item span {
-  font-weight: 600;
+.flash-tag {
+  background: var(--danger);
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: 700;
   font-size: 0.9rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 1rem;
 }
 
-/* --- PRODUCTS SECTION --- */
+.flash-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.flash-desc {
+  color: #ccc;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Countdown Timer Styles */
+.countdown {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 2rem;
+}
+
+.time-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 70px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.time-val {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--brand-green);
+  display: block;
+}
+
+.time-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+.flash-image-container {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* Glowing effect behind the product */
+.flash-image-container::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background: var(--brand-green);
+  filter: blur(80px);
+  opacity: 0.2;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.flash-img {
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  z-index: 1;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+  /* Hero adjustments */
+  .hero-slider {
+    height: 400px;
+  }
+
+  .slide {
+    background-image: var(--bg-mobile);
+    /* Switch to mobile on small screens */
+  }
+
+  .slide-content h2 {
+    font-size: 2rem;
+    /* Smaller hero title */
+  }
+
+  .nav-links {
+    display: none;
+    /* ... rest of nav links logic is removed in previous steps ... */
+  }
+
+  /* Flash Sale adjustments for Mobile */
+  .flash-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .flash-content {
+    min-width: 100%;
+    /* Allow it to shrink below 300px */
+    width: 100%;
+  }
+
+  .flash-image-container {
+    min-width: 100%;
+    width: 100%;
+  }
+
+  .flash-title {
+    font-size: 2rem;
+    /* Smaller flash title */
+  }
+
+  .countdown {
+    justify-content: center;
+    /* Center timer on mobile */
+  }
+
+  /* Detailed Features Mobile Stack */
+  .feature-row {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .feature-title {
+    font-size: 2rem;
+  }
+}
+
+/* --- PRODUCTS SECTION & 3D STYLES --- */
 .section-header {
   display: flex;
   justify-content: space-between;
@@ -370,6 +459,39 @@ header {
   font-size: 0.75rem;
   font-weight: 700;
   border-radius: 4px;
+  z-index: 5;
+}
+
+/* 3D View Trigger */
+.product-img-wrapper {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.view-3d-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--brand-dark);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.product-card:hover .view-3d-badge {
+  background: var(--brand-green);
+  color: white;
+  transform: scale(1.05);
 }
 
 .product-img {
@@ -377,6 +499,7 @@ header {
   height: 200px;
   object-fit: contain;
   margin-bottom: 1rem;
+  transition: var(--transition);
 }
 
 .product-title {
@@ -433,6 +556,88 @@ header {
   /* WhatsApp Green */
   border-color: #25d366;
   color: #fff;
+}
+
+/* --- 3D MODAL OVERLAY --- */
+.modal-3d-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 2000;
+  display: none;
+  /* Flex when active */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(5px);
+}
+
+.modal-3d-overlay.active {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.model-container {
+  width: 90%;
+  max-width: 800px;
+  height: 70vh;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 30px rgba(44, 230, 65, 0.3);
+}
+
+model-viewer {
+  width: 100%;
+  height: 100%;
+  --poster-color: transparent;
+}
+
+.close-3d-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 2001;
+  background: rgba(255, 255, 255, 0.1);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-3d-btn:hover {
+  color: var(--brand-green);
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+.model-instructions {
+  color: #fff;
+  margin-top: 20px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* --- FOOTER --- */
@@ -504,22 +709,17 @@ footer {
   .nav-links.active {
     display: flex;
   }
-  .nav-icons {
-    display: block;
-  }
 
   .hamburger {
     display: block;
   }
-  .logo_img a img {
-    max-width: 50px;
-  }
 
-  .nav-container {
-    padding: 0 16px;
-  }
   .slide-content h2 {
     font-size: 2rem;
+  }
+
+  .price-box {
+    justify-content: center;
   }
 
   .hero-slider {
@@ -542,7 +742,7 @@ footer {
 /* --- DETAILED FEATURES SECTION --- */
 .detailed-features {
   max-width: 1200px;
-  margin: 4rem auto 4rem auto;
+  margin: 0 auto 4rem auto;
   padding: 2rem 1rem;
   position: relative;
 }
@@ -660,7 +860,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 
 .feature-btn {
