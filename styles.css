@@ -684,6 +684,10 @@ footer {
   border: none;
 }
 
+.newsletter .btn-primary {
+  justify-content: flex-start !important;
+}
+
 .footer-bottom {
   text-align: center;
   border-top: 1px solid #333;
